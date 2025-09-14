@@ -37,9 +37,10 @@ class BaseEntity : public ShareData {
         void setAge(int age){
             this->age=age;
         }
-        void setPhonenumber(string Phonenumber){
-            this->phonenumber=phonenumber;
-        }
+        void setPhonenumber(string phonenumber){
+        this->phonenumber = phonenumber;
+}
+
             //Getter
         int getAge(){
             return age;
@@ -76,6 +77,7 @@ class Teacher : public BaseEntity {
 };
 
 // Create Model Course
+
 class Course : public ShareData{
 	private:
 		double hour;
@@ -87,7 +89,7 @@ class Course : public ShareData{
 		}
 		void setStudentIds(int studentIds[5]){
 			for(int i=0;i<5;i++){
-				this->studentIds[i] == studentIds[i];
+				this->studentIds[i] = studentIds[i];
 			}
 		}
 		
