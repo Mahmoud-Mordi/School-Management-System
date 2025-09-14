@@ -1,23 +1,39 @@
 #include <iostream>
 using namespace std;
 
+// Create Model ShareData
+
+class ShareData {
+	private:
+		int id;
+		string name;
+	public:
+		//  Setter
+		void setId(int id){
+			this->id = id;
+		}
+		void setName(string name){
+			this->name = name;
+		}
+		// Getter
+		int getId(){
+			return id;
+		}
+		string getName(){
+			return name;
+		}
+	
+};
+
 //create Model BaseEntity
 
-class BaseEntity {
+class BaseEntity : public ShareData {
     private :
-        int id;
-        string name;
         int age;
         string phonenumber;
 
     public :
            //Setter
-        void setId(int id){
-            this->id=id;
-        }
-        void setName(string name){
-            this->name=name;
-        }
         void setAge(int age){
             this->age=age;
         }
@@ -25,20 +41,13 @@ class BaseEntity {
             this->phonenumber=phonenumber;
         }
             //Getter
-        int getId(){
-            return id;
-        }
-        string getName(){
-            return name;
-        }
         int getAge(){
             return age;
         }
         string getPhonenumber(){
             return phonenumber;
         }
-}
-
+};
 
 //create Model Teacher
 
@@ -66,12 +75,37 @@ class Teacher : public BaseEntity {
         }
 };
 
+// Create Model Course
+class Course : public ShareData{
+	private:
+		double hour;
+		int studentIds[5];
+	public:
+		//  Setter
+		void setHour(double hour){
+			this->hour = hour;
+		}
+		void setStudentIds(int studentIds[5]){
+			for(int i=0;i<5;i++){
+				this->studentIds[i] == studentIds[i];
+			}
+		}
+		
+		// Getter
+		double getHour(){
+			return hour;
+		}
+		int * getStudentIds(){
+			return studentIds;	
+		}
+};
+
 //create Model Student
 
 class student : public BaseEntity {
     private :
         double gpa;
-        string n;
+        Course courses[5];
         Teacher teachers[5];
 
     public :
@@ -85,7 +119,11 @@ class student : public BaseEntity {
                 this->teachers[i]= teachers[i];  
             }
         }
-
+        void setCourses(Course courses[5]){
+			for(int i=0;i<5;i++){
+				this->courses[i] = courses[i];
+			}
+        }
             //Getter
         double getGpa(){
             return gpa;
@@ -93,6 +131,9 @@ class student : public BaseEntity {
         Teacher * getTeachers(){
             return teachers;
         }
+        Course * getCourses(){
+			return courses;
+		}
 
 };
 
