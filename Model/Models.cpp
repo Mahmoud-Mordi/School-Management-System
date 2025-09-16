@@ -1,141 +1,56 @@
-#include <iostream>
-using namespace std;
+#include "Models.h"
 
-// Create Model ShareData
-
-class ShareData {
-	private:
-		int id;
-		string name;
-	public:
-		//  Setter
-		void setId(int id){
-			this->id = id;
-		}
-		void setName(string name){
-			this->name = name;
-		}
-		// Getter
-		int getId(){
-			return id;
-		}
-		string getName(){
-			return name;
-		}
-	
-};
-
-//create Model BaseEntity
-
-class BaseEntity : public ShareData {
-    private :
-        int age;
-        string phonenumber;
-
-    public :
-           //Setter
-        void setAge(int age){
-            this->age=age;
-        }
-        void setPhonenumber(string phonenumber){
-        this->phonenumber = phonenumber;
+// Define the functions for each class
+// ShareData
+void ShareData::setId(int id) {
+    this->id = id;
 }
+void ShareData::setName(string name) { 
+    this->name = name;
+}
+int ShareData::getId() const { return id; }
+string ShareData::getName() const { return name; }
 
-            //Getter
-        int getAge(){
-            return age;
-        }
-        string getPhonenumber(){
-            return phonenumber;
-        }
-};
+// BaseEntity
+void BaseEntity::setAge(int age) {
+    this->age = age; 
+}
+void BaseEntity::setPhonenumber(string phonenumber) {
+    this->phonenumber = phonenumber;
+}
+int BaseEntity::getAge() const { return age; }
+string BaseEntity::getPhonenumber() const { return phonenumber; }
 
-//create Model Teacher
+// Teacher
+void Teacher::setSalary(double salary) { 
+    this->salary = salary; 
+}
+void Teacher::addStudentId(int id) {
+    this->studentIds.push_back(id);
+}
+double Teacher::getSalary() const { return salary; }
+const vector<int>& Teacher::getStudentIds() const { return studentIds; }
 
-class Teacher : public BaseEntity {
-    private :
-        double salary;
-        int studentIds[5];
-    public :
-    
-             //Setter
-        void setSalary(double salary){
-            this->salary=salary;
-        }
-        void setStudentIds(int studentIds[5]){
-            for (int i = 0 ; i < 5 ; i++)
-            this->studentIds[i]=studentIds[i];
-        }
+// Course
+void Course::setHour(double hour) { 
+    this->hour = hour;
+}
+void Course::addStudentId(int id) {
+    this->studentIds.push_back(id);
+}
+double Course::getHour() const { return hour; }
+const vector<int>& Course::getStudentIds() const { return studentIds; }
 
-             //Getter
-        double getsalary(){
-            return salary;
-        }
-        int * getStudentIds(){
-            return studentIds;
-        }
-};
-
-// Create Model Course
-
-class Course : public ShareData{
-	private:
-		double hour;
-		int studentIds[5];
-	public:
-		//  Setter
-		void setHour(double hour){
-			this->hour = hour;
-		}
-		void setStudentIds(int studentIds[5]){
-			for(int i=0;i<5;i++){
-				this->studentIds[i] = studentIds[i];
-			}
-		}
-		
-		// Getter
-		double getHour(){
-			return hour;
-		}
-		int * getStudentIds(){
-			return studentIds;	
-		}
-};
-
-//create Model Student
-
-class student : public BaseEntity {
-    private :
-        double gpa;
-        Course courses[5];
-        Teacher teachers[5];
-
-    public :
-
-            //Setter
-        void setGpa(double gpa){
-            this->gpa=gpa;
-        }
-        void setTeachers(Teacher teachers[5]){
-            for (int i = 0 ; i < 5 ; i++){
-                this->teachers[i]= teachers[i];  
-            }
-        }
-        void setCourses(Course courses[5]){
-			for(int i=0;i<5;i++){
-				this->courses[i] = courses[i];
-			}
-        }
-            //Getter
-        double getGpa(){
-            return gpa;
-        }
-        Teacher * getTeachers(){
-            return teachers;
-        }
-        Course * getCourses(){
-			return courses;
-		}
-
-};
-
+// Student
+void Student::setGpa(double gpa) { 
+    this->gpa = gpa; 
+}
+void Student::addTeacher(const Teacher& teacher) {
+    this->teachers.push_back(teacher);
+}
+void Student::addCourse(const Course& course) {
+    this->courses.push_back(course);
+}
+double Student::getGpa() const { return gpa; }
+const vector<Teacher>& Student::getTeachers() const { return teachers; }
+const vector<Course>& Student::getCourses() const { return courses; }
