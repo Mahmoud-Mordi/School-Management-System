@@ -1,7 +1,6 @@
-School Management System
-
-This is the README file for the School Management System. This program is designed to manage academic data by performing various operations on students, courses, and teachers.t's  The code for this system is organized into a robust, layered architecture, where each folder serves a specific purpose, enhancing the projecscalability and maintainability.
-
+**School Management System**:
+--------------------------
+This program is designed to manage academic data by performing various operations on students, courses, and teachers. The code for this system is organized into a robust, layered architecture, where each folder serves a specific purpose, enhancing the projecscalability and maintainability.
 The system is built on a layered architecture, which separates the project's concerns into distinct folders. This design makes the code clean, organized, and easy to debug and expand.
 
 * **Model**: The foundational layer of the project. It defines the core data structures used throughout the application. It contains only data members and getter/setter functions.
@@ -12,49 +11,48 @@ The system is built on a layered architecture, which separates the project's con
 * **Main.cpp**: The entry point of the entire application. It contains the main program loop, displays all menus, handles user input, and calls the functions in the **Controller** layer.
 
 ---
+How to Use the Program?
+1.Download and Run the Program:
+Download the program's executable file ( start.exe ).
+Run the program by double-clicking on the executable file or executing it from the command line.
 
-The program will display a main menu with options for managing students, courses, and teachers. Use the corresponding number keys to select an option and follow the on-screen prompts.
+---
+The program will display a main menu with options for managing students, courses, and teachers.
+Use the number keys (1, 2, 3) to select the desired menu.
+Follow the on-screen prompts to enter data or navigate through the options.
 
-Available Options:
-Students Menu :
+**Data Validation**
+The program includes robust data validation to ensure the information you enter is correct. If you enter invalid data (e.g., a letter instead of an age), the program will display an error message and prompt you to try again.
 
-Add a new student.
+**Available Options**
+The main menu leads to three sub-menus, each with its own set of operations.
 
-Show all students.
+Students Menu:
+1. Add a new student.
+2. Show all students.
+3. Edit an existing student.
+4. Remove a student.
+5. Search for a student by their ID.
+6. Return to the main menu.
 
-Edit an existing student.
+Courses Menu:
+1. Add a new course.
+2. Show all courses.
+3. Edit an existing course.
+4. Remove a course.
+5. Search for a course by its ID.
+6. Return to the main menu.
 
-Remove a student.
+Teachers Menu:
+1. Add a new teacher.
+2. Show all teachers.
+3. Edit an existing teacher.
+4. remove a teacher.
+5. Search for a teacher by their ID.
+6. Return to the main menu.
 
-Search for a student by ID.
+Option 4 : Exit the program.
 
-Courses Menu :
+---
+Feel free to use and customize this management system according to your needs. If you encounter any issues or have further questions, please refer to the source code and the README file for guidance.
 
-Add a new course.
-
-Show all courses.
-
-Edit an existing course.
-
-Remove a course.
-
-Search for a course by ID.
-
-Teachers Menu :
-
-Add a new teacher.
-
-Show all teachers.
-
-Edit an existing teacher.
-
-Remove a teacher.
-
-Search for a teacher by ID.
-
-Exit :
-
-Exits the program.
-
-Author
-Mahmoud Mordi
