@@ -1,7 +1,7 @@
 **School Management System**:
 --------------------------
-
 This program is designed to manage academic data by performing various operations on students, courses, and teachers. The code for this system is organized into a robust, layered architecture, where each folder serves a specific purpose, enhancing the project's scalability and maintainability. The system is built on a layered architecture, which separates the project's concerns into distinct folders. This design, based on **NVC** and **OOP** principles, makes the code clean, organized, and easy to debug and expand.
+
 ---
 How to Use the Program?
 
