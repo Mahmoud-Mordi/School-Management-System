@@ -12,8 +12,8 @@ The system is built on a layered architecture, which separates the project's con
 
 ---
 How to Use the Program?
-1.Download and Run the Program:
-Download the program's executable file ( start.exe ).
+
+Download the program's executable file ( start.exe )...
 Run the program by double-clicking on the executable file or executing it from the command line.
 
 ---
